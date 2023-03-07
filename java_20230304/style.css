@@ -1,0 +1,100 @@
+#theWholePage{
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+    background-color: white;
+    background-image: radial-gradient(white, grey);
+    padding: 100px;
+    font-family: 'Meddon', cursive;
+}
+
+#mainPart{
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    width: 800px;
+    box-shadow: 20px 20px 10px 10px grey;
+}
+#currentPicture{
+    display: flex;
+    flex-direction: column;
+    height: 400px;
+    width: 700px;
+}
+#photo{
+    height: 400px;
+    width: 700px;
+}
+#right{
+    transform: rotate(0.5turn);
+}
+.arrow{
+    width: 50px;
+    border: none;
+    height: 400px;
+}
+.arrow:hover{
+    cursor: pointer;
+    background: black;
+    opacity: 0.5;
+}
+#about{
+    background-color: black;
+    margin: 0;
+    padding: 0 20px;
+    height: 120px;
+    opacity: 0.5;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    width: 660px;
+    position: absolute;
+    top: 499px;
+}
+#thumbnails{
+    display: flex;
+    height: 100px;
+    width: 500px;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 70px;
+}
+.thumbnail{
+    width: 70px;
+    height: 70px;
+    border: 3px solid white;
+    border-radius: 2px;
+}
+.thumbnail:hover{
+    cursor: pointer;
+    border-color: grey;
+    box-shadow: 0px 0px 10px 10px grey;
+}
+.hidden{
+    position: relative;
+    bottom: 120px;
+    text-align: center;
+    font-size: 13px;
+    font-family: 'Open Sans', sans-serif;
+    color:white;
+    border: 1px solid black;
+    border-radius: 2px;
+    background: black;
+    opacity: 0.5;
+    display: none;
+}
+.box:hover .hidden{
+    display: block;
+    
+}
+.hidden::after{
+    content:"";
+    border: 10px solid transparent;
+    position: absolute;
+}
+.bubble.hidden::after{
+    border-top-color: black;
+    border-bottom: 0;
+    bottom: -10px;
+    left: 40%;
+}
