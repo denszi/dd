@@ -72,7 +72,6 @@ imagesData.forEach((item, index) => {
         <img src=${imagesData[index].photo} class='thumbnail' data-index="${index}">
         <div class="hidden bubble">` + imagesData[index].title + `</div>
     </div>`);
-    $('.thumbnail').css('border','5px dotted blue');
     $('.thumbnail').click(function(event) {
         let doIt = $(event.target).attr('data-index');
         $('#photo').attr('src',imagesData[doIt].photo);
@@ -80,5 +79,3 @@ imagesData.forEach((item, index) => {
         $('#description').text(imagesData[doIt].description);
     });
 });
-
-/*denszi.github.io*/
